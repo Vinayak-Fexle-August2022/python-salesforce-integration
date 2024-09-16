@@ -2,8 +2,6 @@ import json
 from simple_salesforce import Salesforce
 import os
 import zipfile
-from datetime import datetime
-import xmltodict
 import ast
 import time
 import xml.dom.minidom
@@ -69,9 +67,6 @@ def check_deploy_status(sf_session: Salesforce, async_process_id: str, test_type
         time.sleep(test_type_with_sleep_time_interval.get(test_type, 10))
 
     return status
-
-
-
 
 
 def create_metadata_zip_retrieve_case(retrieved_file, file_path: str):
